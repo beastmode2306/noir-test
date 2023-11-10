@@ -1,0 +1,29 @@
+.button {
+    font-weight: 700;
+    font-size: medium;
+    border-color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    padding-block: 8px;
+    width: 100%;
+}
+
+.button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (hover: hover) {
+    .button {
+        transition: background-color 0.2s, color 0.2s, opacity 0.2s;
+        opacity: 0.5;
+    }
+
+    .button:hover:not([disabled]) {
+        color: white;
+        background-color: black;
+        opacity: 1;
+    }
+}
